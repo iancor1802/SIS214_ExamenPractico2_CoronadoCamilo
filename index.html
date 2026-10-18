@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Curriculum Vitae - Ian Coronado</title>
+    <!-- Vinculación del punto de entrada maestro de mis hojas de estilo CSS3 -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         ENCABEZADO PRINCIPAL (HEADER)
+         Incluye barra superior con título, conmutador de tema oscuro/claro y la
+         navegación principal accesible del sitio.
+         ========================================================================== -->
+    <header role="banner" class="animate-header">
+        <div class="header-top">
+            <div class="header-title">
+                <h1>MI CURRICULUM VITAE</h1> 
+                <p><small>Estudiante de 4to semestre de Ingeniería de Sistemas de la Universidad Católica Boliviana</small></p>
+            </div>
+
+            <button id="hamburger-btn" class="hamburger-btn" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Botón interactivo para conmutar entre Modo Oscuro y Modo Claro mediante JS -->
+            <button id="theme-toggle" class="theme-btn" type="button" aria-label="Cambiar tema">
+                <span id="theme-text">Modo Oscuro</span>
+                <span id="theme-icon">🌙</span>
+            </button> 
+        </div>
+
+        <!-- Enlace de accesibilidad para saltar directamente al contenido principal -->
+        <a href="#Perfil" class="skip-link">Saltar al contenido principal</a>
+
+        <!-- Menú de navegación global del sitio con ID y clase correctos -->
+        <nav id="primary-navigation" class="nav-menu" aria-label="Navegación principal del currículum">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Perfil Profesional</a></li>
+                <li><a href="Formacion.html">Formación Académica</a></li>
+                <li><a href="Experiencia.html">Experiencia Laboral</a></li>
+                <li><a href="Habilidades.html">Habilidades Técnicas</a></li>
+                <li><a href="Cursos.html">Cursos</a></li>
+                <li><a href="Idiomas.html">Idiomas</a></li>
+                <li><a href="Proyectos.html">Proyectos Destacados</a></li>
+                <li><a href="Portafolio.html">Portafolio Multimedia</a></li>
+                <li><a href="Contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==========================================================================
+         CONTENIDO PRINCIPAL (MAIN)
+         Sección de Perfil Profesional dividida en barra lateral de datos (aside)
+         y biografía descriptiva (article).
+         ========================================================================== -->
+    <main id="main-content" role="main" class="animate-fade-in">
+        
+        <!-- Buscador dinámico en tiempo real accesible -->
+        <div class="search-container">
+            <label for="dynamic-search" class="sr-only" style="display:none;">Buscar elementos</label>
+            <input 
+                type="text" 
+                id="dynamic-search" 
+                class="form-input" 
+                placeholder="🔍 Buscar habilidades, proyectos o certificaciones..." 
+                autocomplete="off"
+                aria-label="Buscar elementos en tiempo real"
+            />
+        </div>
+
+        <section id="Perfil" aria-labelledby="Perfil-heading" class="profile-layout">
+            
+            <!-- Barra lateral: Fotografía personal, datos clave y detalles de contacto -->
+            <aside class="profile-sidebar project-card">
+                <div class="profile-avatar-container">
+                    <img src="./assets/images/fotoperfil2.jpg" alt="Fotografía profesional de Ian Coronado" class="profile-avatar" />
+                </div>
+                
+                <div class="profile-sidebar-info">
+                    <h3>Ian Camilo Coronado Guachalla</h3>
+                    <span class="tech-badge">Ingeniería de Sistemas</span>
+                    
+                    <address class="contact-details">
+                        <p>📧 <strong>Correo:</strong><br><a href="mailto:coronadoiancamilo@gmail.com">coronadoiancamilo@gmail.com</a></p>
+                        <p>📞 <strong>Teléfono:</strong><br><a href="tel:+59169927450">+591 69927450</a></p>
+                        <p>📍 <strong>Ubicación:</strong><br>La Paz, Bolivia</p>
+                    </address>
+                </div>
+            </aside>
+
+            <!-- Artículo principal: Frase personal destacada y biografía -->
+            <article class="profile-content project-card">
+                <h2 id="Perfil-heading">Perfil Profesional</h2>
+
+                <!-- Bloque de Frase Personal -->
+                <div class="quote-card">
+                    <p class="quote-title">💡 <strong>Frase personal:</strong></p>
+                    <blockquote class="styled-quote">
+                        <p>"Tener que cumplir tus metas no solo depende de esfuerzo sino que también implica algo de suerte"</p>
+                        <footer>— <cite>Ian Coronado</cite></footer>
+                    </blockquote>
+                </div>
+
+                <!-- Biografía y descripción profesional -->
+                <div class="bio-text">
+                    <p>
+                        Mi nombre es <strong>Ian Camilo Coronado Guachalla</strong>, estudiante de 
+                        <em>Ingeniería de Sistemas</em> en la <abbr title="Universidad Católica Boliviana 'San Pablo'">UCB</abbr>, con un enfoque
+                        práctico orientado a la resolución de problemas técnicos.
+                        Me considero una persona proactiva y apasionada por la tecnología.
+                    </p>
+
+                    <p>
+                        Cuento con sólida formación académica inicial en desarrollo de software, 
+                        lógica de programación y gestión de datos tales como 
+                        programación orientada a objetos (Java, JavaFX) y diseño de bases de datos relacionales (PostgreSQL, SQL). 
+                        Poseo un alto enfoque en la creación de soluciones <em>eficientes y funcionales</em>.
+                    </p>
+
+                    <p>
+                        Destaco por mi <strong>capacidad de aprendizaje autónomo</strong>, pensamiento analítico, 
+                        <mark class="highlight-text">adaptabilidad a nuevas tecnologías</mark> y facilidad para colaborar en equipo.
+                    </p>
+
+                    <p>
+                        Mi objetivo es integrarme a un entorno profesional donde pueda aplicar mis habilidades técnicas, 
+                        colaborar en proyectos de impacto y <em>seguir creciendo</em> dentro del sector de las tecnologías de la información.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Diálogo modal nativo accesible para avisos de contacto -->
+        <dialog id="contact-dialog" open role="dialog" aria-modal="true" aria-labelledby="dialog-title" aria-describedby="dialog-desc" class="styled-dialog">
+            <div class="dialog-content">
+                <span class="dialog-icon">🕒</span>
+                <h3 id="dialog-title">Horarios de Contacto</h3>
+                <p id="dialog-desc">Puedes contactarme de Lunes a Viernes de 9:00 am a 7:00 pm</p>
+                <form method="dialog">
+                    <button type="submit" class="btn-location" aria-label="Cerrar aviso importante">Entendido / Cerrar Aviso</button>
+                </form>
+            </div>
+        </dialog>
+    </main>
+    
+    <!-- ==========================================================================
+         PIE DE PÁGINA (FOOTER)
+         Derechos de autor, stack tecnológico utilizado y fecha de actualización
+         ========================================================================== -->
+    <footer role="contentinfo">
+        <p><small>&copy; Ian Camilo Coronado Guachalla. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+
+    <!-- Carga diferida de la lógica principal en JS (Gestión de tema oscuro y modales) -->
+    <script src="jss/main.js"></script>
+</body>
+</html>

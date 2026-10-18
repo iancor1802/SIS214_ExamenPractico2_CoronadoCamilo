@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia Laboral - Mi Curriculum Vitae</title>
+    <!-- Vinculación del punto de entrada maestro para hojas de estilo CSS3 -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         ENCABEZADO PRINCIPAL (HEADER)
+         Incluye la barra de título superior, conmutador de temas mediante JS, 
+         acceso accesible de salto rápido y la barra de navegación con la pestaña activa.
+         ========================================================================== -->
+    <header role="banner" class="animate-header">
+        <div class="header-top">
+            <div class="header-title">
+                <h1>MI CURRICULUM VITAE</h1> 
+                <p><small>Estudiante de 4to semestre de Ingeniería de Sistemas de la Universidad Católica Boliviana</small></p>
+            </div>
+            <button id="hamburger-btn" class="hamburger-btn" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Botón interactivo para alternar entre Modo Oscuro y Modo Claro mediante JavaScript -->
+            <button id="theme-toggle" class="theme-btn" type="button" aria-label="Cambiar tema">
+                <span id="theme-text">Modo Oscuro</span>
+                <span id="theme-icon">🌙</span>
+            </button> 
+        </div>
+
+        <!-- Enlace accesible de salto rápido directo al contenido principal -->
+        <a href="#Perfil" class="skip-link">Saltar al contenido principal</a>
+
+        <!-- Menú de navegación accesible global con indicador aria-current en Experiencia Laboral -->
+        <nav id="primary-navigation" class="nav-menu" aria-label="Navegación principal del currículum">
+            <ul>
+                <li><a href="index.html">Perfil Profesional</a></li>
+                <li><a href="Formacion.html">Formación Académica</a></li>
+                <li><a href="Experiencia.html" class="active" aria-current="page">Experiencia Laboral</a></li>
+                <li><a href="Habilidades.html">Habilidades Técnicas</a></li>
+                <li><a href="Cursos.html">Cursos</a></li>
+                <li><a href="Idiomas.html">Idiomas</a></li>
+                <li><a href="Proyectos.html">Proyectos Destacados</a></li>
+                <li><a href="Portafolio.html">Portafolio Multimedia</a></li>
+                <li><a href="Contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==========================================================================
+         CONTENIDO PRINCIPAL (MAIN)
+         Sección de Experiencia Profesional organizada mediante una retícula responsiva
+         (CSS Grid) que contiene las tarjetas de proyectos desarrollados por semestre.
+         ========================================================================== -->
+    <main id="main-content" role="main" class="animate-fade-in">
+    <section id="Experiencia" aria-labelledby="Experiencia-heading">
+        <h2 id="Experiencia-heading">Experiencia Profesional</h2>
+        <p>Proyectos académicos y de desarrollo de software realizados durante mi formación:</p>
+
+
+        <!-- Contenedor estructurado con CSS Grid para las tarjetas de experiencia -->
+        <div class="projects-grid">
+    
+            <!-- Tarjeta de proyecto: Primer Semestre (Python) -->
+            <article class="project-card animate-fade-in">
+                <div class="exp-header">
+                    <h3>1er Semestre</h3>
+                    <span class="tech-badge">Python</span>
+                </div>
+                <p>
+                    Realicé un proyecto acerca del juego tradicional de piedra, papel o tijera en el lenguaje de programación Python.
+                </p>
+                <div class="date-container">
+                    <span class="date-icon">📅</span>
+                    <time datetime="2025-02-10">10 Feb 2025</time> 
+                    <span class="date-separator">—</span> 
+                    <time datetime="2025-06-29">29 Jun 2025</time>
+                </div>
+            </article>
+
+            <!-- Tarjeta de proyecto: Segundo Semestre (C++) -->
+            <article class="project-card animate-fade-in">
+                <div class="exp-header">
+                    <h3>2do Semestre</h3>
+                    <span class="tech-badge">C++</span>
+                </div>
+                <p>
+                    Realicé un proyecto en base a la recursividad y archivos en el lenguaje de programación C++.
+                </p>
+                <div class="date-container">
+                    <span class="date-icon">📅</span>
+                    <time datetime="2025-08-07">07 Ago 2025</time> 
+                    <span class="date-separator">—</span> 
+                    <time datetime="2025-11-25">25 Nov 2025</time>
+                </div>
+            </article>
+
+            <!-- Tarjeta de proyecto: Tercer Semestre (POO / Java) -->
+            <article class="project-card animate-fade-in">
+                <div class="exp-header">
+                    <h3>3er Semestre</h3>
+                    <span class="tech-badge">Java / POO</span>
+                </div>
+                <p>
+                    Realicé un proyecto con ayuda de la Programación Orientada a Objetos: una tienda virtual similar a Amazon o eBay.
+                </p>
+                <div class="date-container">
+                    <span class="date-icon">📅</span>
+                    <time datetime="2026-02-05">05 Feb 2026</time> 
+                    <span class="date-separator">—</span> 
+                    <time datetime="2026-07-10">10 Jul 2026</time>
+                </div>
+            </article>
+
+        </div>
+    </section>
+</main>
+
+    <!-- ==========================================================================
+         PIE DE PÁGINA (FOOTER)
+         Derechos de autor, especificaciones de arquitectura web y timestamp de actualización.
+         ========================================================================== -->
+    <footer role="contentinfo">
+        <p><small>&copy; Ian Camilo Coronado Guachalla. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+
+    <!-- Carga diferida de scripts JavaScript para interactividad global -->
+    <script src="jss/main.js"></script>
+</body>
+</html>

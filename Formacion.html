@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formación Académica - Mi Curriculum Vitae</title>
+    <!-- Vinculación del punto de entrada maestro para hojas de estilo CSS3 -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         ENCABEZADO PRINCIPAL (HEADER)
+         Incluye la barra superior con título, conmutador de tema, enlace de salto 
+         accesible y la barra de navegación con la pestaña "Formación Académica" activa.
+         ========================================================================== -->
+    <header role="banner" class="animate-header">
+        <div class="header-top">
+            <div class="header-title">
+                <h1>MI CURRICULUM VITAE</h1> 
+                <p><small>Estudiante de 4to semestre de Ingeniería de Sistemas de la Universidad Católica Boliviana</small></p>
+            </div>
+            <button id="hamburger-btn" class="hamburger-btn" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Botón interactivo para alternar entre Modo Oscuro y Modo Claro mediante JavaScript -->
+            <button id="theme-toggle" class="theme-btn" type="button" aria-label="Cambiar tema">
+                <span id="theme-text">Modo Oscuro</span>
+                <span id="theme-icon">🌙</span>
+            </button> 
+        </div>
+
+        <!-- Enlace accesible de salto rápido directo al contenido principal -->
+        <a href="#Perfil" class="skip-link">Saltar al contenido principal</a>
+
+        <!-- Menú de navegación accesible global con indicador aria-current en Formación Académica -->
+        <nav id="primary-navigation" class="nav-menu" aria-label="Navegación principal del currículum">
+            <ul>
+                <li><a href="index.html">Perfil Profesional</a></li>
+                <li><a href="Formacion.html" class="active" aria-current="page">Formación Académica</a></li>
+                <li><a href="Experiencia.html">Experiencia Laboral</a></li>
+                <li><a href="Habilidades.html">Habilidades Técnicas</a></li>
+                <li><a href="Cursos.html">Cursos</a></li>
+                <li><a href="Idiomas.html">Idiomas</a></li>
+                <li><a href="Proyectos.html">Proyectos Destacados</a></li>
+                <li><a href="Portafolio.html">Portafolio Multimedia</a></li>
+                <li><a href="Contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==========================================================================
+         CONTENIDO PRINCIPAL (MAIN)
+         Sección dedicada a detallar la trayectoria educativa universitaria y secundaria 
+         estructurada con marcado semántico HTML5 y etiquetas <time>.
+         ========================================================================== -->
+    <main id="main-content" role="main" class="animate-fade-in">
+    <section id="Formacion" aria-labelledby="Formacion-heading">
+        <h2 id="Formacion-heading">Formación Académica</h2>
+        <p>Historial académico e instituciones de estudio:</p>
+
+        <!-- Contenedor en cuadrícula para las tarjetas de formación -->
+        <div class="projects-grid">
+
+            <!-- Bloque 1: Estudios Universitarios -->
+            <article class="project-card animate-fade-in">
+                <div class="card-icon">🎓</div>
+                <h3>Ingeniería de Sistemas</h3>
+                <p><strong>Universidad Católica Boliviana "San Pablo"</strong></p>
+                
+                <div class="date-container">
+                    <span class="date-icon">📅</span>
+                    <time datetime="2025">2025</time> 
+                    <span class="date-separator">—</span> 
+                    <time datetime="2029">2029 (En curso)</time>
+                </div>
+
+                <div class="location-btn-wrapper">
+                    <a href="https://maps.google.com/?q=Universidad+Catolica+Boliviana+San+Pablo+La+Paz" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn-location">
+                        📍 Ver Ubicación
+                    </a>
+                </div>
+            </article>
+
+            <!-- Bloque 2: Educación Secundaria y Bachillerato -->
+            <article class="project-card animate-fade-in">
+                <div class="card-icon">🏫</div>
+                <h3>Bachiller Técnico Humanístico</h3>
+                <p><strong>Colegio Inglés Católico</strong></p>
+                
+                <div class="date-container">
+                    <span class="date-icon">🎓</span>
+                    <time datetime="2024">Graduado en 2024</time>
+                </div>
+
+                <div class="location-btn-wrapper">
+                    <a href="https://maps.google.com/?q=Colegio+Ingles+Catolico" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn-location">
+                        📍 Ver Ubicación
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+</main>
+    <!-- ==========================================================================
+         PIE DE PÁGINA (FOOTER)
+         Derechos de autor, especificaciones de arquitectura web y timestamp de actualización.
+         ========================================================================== -->
+    <footer role="contentinfo">
+        <p><small>&copy; Ian Camilo Coronado Guachalla. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+
+    <!-- Carga diferida de scripts JavaScript para interactividad global -->
+    <script src="jss/main.js"></script>
+</body>
+</html>

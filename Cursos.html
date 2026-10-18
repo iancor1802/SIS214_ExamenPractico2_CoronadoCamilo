@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos y Certificaciones - Mi Curriculum Vitae</title>
+    <!-- Vinculación de la hoja de estilos principal -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         ENCABEZADO PRINCIPAL (HEADER)
+         Contiene el título de la página, el conmutador de tema, enlace de salto 
+         accesible y la barra de navegación con la pestaña "Cursos" activa.
+         ========================================================================== -->
+    <header role="banner" class="animate-header">
+        <div class="header-top">
+            <div class="header-title">
+                <h1>MI CURRICULUM VITAE</h1> 
+                <p><small>Estudiante de 4to semestre de Ingeniería de Sistemas de la Universidad Católica Boliviana</small></p>
+            </div>
+            <button id="hamburger-btn" class="hamburger-btn" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Botón para alternar el tema visual mediante JavaScript -->
+            <button id="theme-toggle" class="theme-btn" type="button" aria-label="Cambiar tema">
+                <span id="theme-text">Modo Oscuro</span>
+                <span id="theme-icon">🌙</span>
+            </button> 
+        </div>
+
+        <!-- Acceso directo accesible para navegación por teclado y lectores de pantalla -->
+        <a href="#Perfil" class="skip-link">Saltar al contenido principal</a>
+
+        <!-- Menú principal de navegación con marcador aria-current en la página actual -->
+        <nav id="primary-navigation" class="nav-menu" aria-label="Navegación principal del currículum">
+            <ul>
+                <li><a href="index.html">Perfil Profesional</a></li>
+                <li><a href="Formacion.html">Formación Académica</a></li>
+                <li><a href="Experiencia.html">Experiencia Laboral</a></li>
+                <li><a href="Habilidades.html">Habilidades Técnicas</a></li>
+                <li><a href="Cursos.html" class="active" aria-current="page">Cursos</a></li>
+                <li><a href="Idiomas.html">Idiomas</a></li>
+                <li><a href="Proyectos.html">Proyectos Destacados</a></li>
+                <li><a href="Portafolio.html">Portafolio Multimedia</a></li>
+                <li><a href="Contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==========================================================================
+         CONTENEDOR PRINCIPAL (MAIN)
+         Sección dedicada a listar mis certificaciones, cursos y talleres 
+         organizados de manera semántica mediante etiquetas de lista y <time>.
+         ========================================================================== -->
+    <main id="main-content" role="main" class="animate-fade-in">
+    <section id="Cursos" aria-labelledby="Cursos-heading">
+        <h2 id="Cursos-heading">Certificaciones y Cursos</h2>
+        <p>Formación complementaria, acreditaciones oficiales y talleres prácticos:</p>
+
+        <!-- Contenedor en cuadrícula para las tarjetas -->
+        <div class="courses-grid">
+
+            <!-- Bloque 1: Certificaciones -->
+            <article class="course-card animate-fade-in">
+                <div class="card-icon">📜</div>
+                <h3>Certificaciones</h3>
+                <ul class="styled-list">
+                    <li>
+                        <strong>Certificación en Idioma Inglés</strong><br>
+                        <span>Centro Americano Boliviano (CBA)</span><br>
+                        <time datetime="2024-11">Noviembre 2024</time>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- Bloque 2: Cursos -->
+            <article class="course-card animate-fade-in">
+                <div class="card-icon">💻</div>
+                <h3>Cursos</h3>
+                <ul class="styled-list">
+                    <li>
+                        <strong>Curso Interdisciplinario de Educación STEAM</strong><br>
+                        <time datetime="2024-08">Agosto 2024</time>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- Bloque 3: Talleres -->
+            <article class="course-card animate-fade-in">
+                <div class="card-icon">⚡</div>
+                <h3>Talleres</h3>
+                <ul class="styled-list">
+                    <li>
+                        <strong>Taller Práctico de Programación de Microcontroladores Arduino y Sensores</strong><br>
+                        <time datetime="2023-06">Junio 2023</time>
+                    </li>
+                </ul>
+            </article>
+
+        </div>
+    </section>
+</main>
+
+    <!-- ==========================================================================
+         PIE DE PÁGINA (FOOTER)
+         Información de derechos reservados, stack técnico y fecha de actualización.
+         ========================================================================== -->
+    <footer role="contentinfo">
+        <p><small>&copy; Ian Camilo Coronado Guachalla. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+
+    <!-- Script JS para interacciones dinámicas de la página -->
+    <script src="jss/main.js"></script>
+</body>
+</html>

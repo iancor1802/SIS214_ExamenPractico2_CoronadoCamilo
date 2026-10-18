@@ -1,0 +1,263 @@
+/* ==========================================================================
+   ESTRUCTURA DE MAQUETACIÓN Y DISPOSICIÓN VISUAL (LAYOUT)
+   Estrategia Mobile-First: Estilos base para móviles y adaptación progresiva.
+   ========================================================================== */
+
+/* ==========================================================================
+   1. MÓVIL (< 768px) - ESTILOS BASE POR DEFECTO
+   ========================================================================== */
+
+/* --- ENCABEZADO PRINCIPAL FIJO (STICKY NAVIGATION) --- */
+header[role="banner"] {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--bg-header);
+  backdrop-filter: var(--backdrop-glass);
+  -webkit-backdrop-filter: var(--backdrop-glass);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-md);
+  padding-bottom: 0;
+  box-shadow: var(--shadow-header);
+}
+
+.header-top {
+  display: flex;
+  flex-direction: column; /* Apilado vertical por defecto en celular */
+  align-items: center;
+  text-align: center;
+  gap: var(--space-md);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header-title {
+  text-align: center;
+  width: 100%;
+}
+
+/* --- MENÚ DE NAVEGACIÓN PRINCIPAL EN MÓVIL --- */
+nav[aria-label="Navgacion principal del curriculum"] {
+  max-width: 1200px;
+  margin: var(--space-md) auto 0 auto;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem var(--space-xs);
+  list-style: none;
+  padding: var(--space-xs) 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-color);
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus-visible,
+nav ul li a.active,
+nav ul li a[aria-current="page"] {
+  color: var(--text-secundary);
+  background: rgba(81, 247, 247, 0.22);
+  border-color: rgba(55, 188, 212, 0.5);
+}
+
+/* --- CONTENEDOR PRINCIPAL Y SECCIONES --- */
+main#main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+section {
+  background: var(--color-card);
+  border: 1px solid var(--color-green2);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-header);
+  position: relative;
+  overflow: hidden;
+}
+
+section:hover {
+  border-color: rgba(13, 148, 136, 0.35);
+}
+
+/* --- PERFIL PROFESIONAL (Apilado en 1 columna) --- */
+.profile-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--color-card);
+  border: 1px solid var(--color-green2);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  gap: var(--space-md);
+}
+
+/* --- RETÍCULAS DE PROYECTOS, PORTAFOLIO Y CURSOS (1 columna en móvil) --- */
+.projects-grid,
+.courses-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+}
+
+/* --- TABLAS RESPONSIVAS CON SCROLL HORIZONTAL EN MÓVIL --- */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1.2rem;
+}
+
+/* --- FORMULARIO DE CONTACTO EN MÓVIL --- */
+.contact-form {
+  width: 100%;
+  padding: 1.2rem;
+  box-sizing: border-box;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column; /* Botones de formulario apilados */
+  gap: 0.8rem;
+}
+
+/* --- PIE DE PÁGINA NATIVO --- */
+footer[role="contentinfo"] {
+  background: var(--color-card);
+  border-top: 1px solid var(--color-green2);
+  text-align: center;
+  padding: var(--space-md2) var(--space-md);
+  margin-top: var(--space-md);
+  box-shadow: var(--shadow-header);
+}
+
+footer[role="contentinfo"] p {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.88rem;
+}
+
+
+/* ==========================================================================
+   2. TABLET (768px a 1024px)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+
+  /* Cabecera horizontalizada */
+  .header-top {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .header-title {
+    text-align: left;
+  }
+
+  nav ul {
+    gap: 0.6rem var(--space-md);
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.85rem;
+  }
+
+  /* Distribución de Perfil en Tablet (Orientación horizontal de sidebar) */
+  .profile-sidebar {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .profile-avatar-container {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  /* Retículas de proyectos y cursos pasan a 2 columnas */
+  .projects-grid,
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+  }
+
+  /* Botones del formulario vuelven a estar horizontalmente alineados */
+  .form-actions {
+    flex-direction: row;
+  }
+
+  section {
+    padding: var(--space-md2);
+  }
+}
+
+
+/* ==========================================================================
+   3. ESCRITORIO (> 1024px)
+   ========================================================================== */
+@media screen and (min-width: 1025px) {
+
+  main#main-content {
+    padding: 2rem var(--space-md2);
+  }
+
+  /* Perfil pasa a 2 columnas asimétricas con Sidebar fija (sticky) */
+  .profile-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .profile-sidebar {
+    flex-direction: column;
+    text-align: center;
+    position: sticky;
+    top: 90px;
+  }
+
+  /* Proyectos y Portafolio Multimedia pasan a 3 columnas */
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Cursos y certificaciones se mantienen en 2-3 columnas según espacio */
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+
+  /* Ancho óptimo y centrado para formulario en escritorio */
+  .contact-form {
+    max-width: 650px;
+    margin: 1.5rem auto 0 auto;
+    padding: 2rem;
+  }
+}

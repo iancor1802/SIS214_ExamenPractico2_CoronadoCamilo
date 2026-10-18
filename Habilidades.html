@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidades Técnicas - Mi Curriculum Vitae</title>
+    <!-- Vinculación del punto de entrada maestro para hojas de estilo CSS3 -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         ENCABEZADO PRINCIPAL (HEADER)
+         Incluye la barra de título superior, conmutador de tema visual (oscuro/claro),
+         enlace de salto rápido accesible y la barra de navegación con la página activa.
+         ========================================================================== -->
+    <header role="banner" class="animate-header">
+        <div class="header-top">
+            <div class="header-title">
+                <h1>MI CURRICULUM VITAE</h1> 
+                <p><small>Estudiante de 4to semestre de Ingeniería de Sistemas de la Universidad Católica Boliviana</small></p>
+            </div>
+            <button id="hamburger-btn" class="hamburger-btn" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Botón interactivo para alternar el tema mediante JavaScript -->
+            <button id="theme-toggle" class="theme-btn" type="button" aria-label="Cambiar tema">
+                <span id="theme-text">Modo Oscuro</span>
+                <span id="theme-icon">🌙</span>
+            </button> 
+        </div>
+
+        <!-- Acceso directo accesible para navegación por teclado y lectores de pantalla -->
+        <a href="#Perfil" class="skip-link">Saltar al contenido principal</a>
+
+        <!-- Menú de navegación accesible entre páginas del sitio web con estado activo -->
+        <nav id="primary-navigation" class="nav-menu" aria-label="Navegación principal del currículum">
+            <ul>
+                <li><a href="index.html">Perfil Profesional</a></li>
+                <li><a href="Formacion.html">Formación Académica</a></li>
+                <li><a href="Experiencia.html">Experiencia Laboral</a></li>
+                <li><a href="Habilidades.html" class="active" aria-current="page">Habilidades Técnicas</a></li>
+                <li><a href="Cursos.html">Cursos</a></li>
+                <li><a href="Idiomas.html">Idiomas</a></li>
+                <li><a href="Proyectos.html">Proyectos Destacados</a></li>
+                <li><a href="Portafolio.html">Portafolio Multimedia</a></li>
+                <li><a href="Contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==========================================================================
+         CONTENIDO PRINCIPAL (MAIN)
+         Sección de Habilidades Técnicas estructurada interactivamente con etiquetas
+         nativas de HTML5 (<details> y <summary>) para desplegar las categorías.
+         ========================================================================== -->
+    <main id="main-content" role="main" class="animate-fade-in">
+    <section id="Habilidades" aria-labelledby="Habilidades-heading">
+        <h2 id="Habilidades-heading">Habilidades Técnicas</h2>
+        <p>Competencias tecnológicas, herramientas de desarrollo y habilidades profesionales:</p>
+
+        <article class="skills-container">
+
+            <!-- Bloque 1: Lenguajes o Tecnologías -->
+            <details class="skills-accordion animate-fade-in" open>
+                <summary class="accordion-header">
+                    <div class="summary-title">
+                        <span class="accordion-icon">💻</span>
+                        <strong>Lenguajes o Tecnologías</strong>
+                    </div>
+                </summary>
+                <div class="accordion-content">
+                    <ul class="skills-badges">
+                        <li class="badge">☕ Java</li>
+                        <li class="badge">⚙️ C++</li>
+                        <li class="badge">🖼️ JavaFX</li>
+                        <li class="badge">📊 MatLab</li>
+                        <li class="badge">🗄️ PostgreSQL / SQL</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Bloque 2: Herramientas de Desarrollo -->
+            <details class="skills-accordion animate-fade-in">
+                <summary class="accordion-header">
+                    <div class="summary-title">
+                        <span class="accordion-icon">🛠️</span>
+                        <strong>Herramientas de Desarrollo</strong>
+                    </div>
+                </summary>
+                <div class="accordion-content">
+                    <ul class="skills-badges">
+                        <li class="badge">☕ Apache NetBeans</li>
+                        <li class="badge">🐙 GitHub</li>
+                        <li class="badge">🐘 pgAdmin</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Bloque 3: Habilidades Profesionales -->
+            <details class="skills-accordion animate-fade-in">
+                <summary class="accordion-header">
+                    <div class="summary-title">
+                        <span class="accordion-icon">🚀</span>
+                        <strong>Habilidades Profesionales</strong>
+                    </div>
+                </summary>
+                <div class="accordion-content">
+                    <ul class="skills-badges">
+                        <li class="badge">📐 Diseño y normalización de bases de datos</li>
+                        <li class="badge">🧩 Pensamiento analítico y resolución de problemas</li>
+                        <li class="badge">👥 Trabajo en equipo y comunicación técnica</li>
+                    </ul>
+                </div>
+            </details>
+
+        </article> 
+    </section>
+</main>
+
+    <!-- ==========================================================================
+         PIE DE PÁGINA (FOOTER)
+         Derechos de autor, especificaciones técnicas de desarrollo y fecha de edición.
+         ========================================================================== -->
+    <footer role="contentinfo">
+        <p><small>&copy; Ian Camilo Coronado Guachalla. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+
+    <!-- Carga del script principal para la funcionalidad dinámica del sitio -->
+    <script src="jss/main.js"></script>
+</body>
+</html>

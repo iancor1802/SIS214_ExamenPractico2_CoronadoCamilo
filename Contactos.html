@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Mi Curriculum Vitae</title>
+    <!-- Vinculación de la hoja de estilos principal -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         ENCABEZADO PRINCIPAL (HEADER)
+         Contiene la barra superior, título del sitio, conmutador de tema visual
+         y el menú de navegación principal con el estado activo en Contactos.
+         ========================================================================== -->
+    <header role="banner" class="animate-header">
+        <div class="header-top">
+            <div class="header-title">
+                <h1>MI CURRICULUM VITAE</h1> 
+                <p><small>Estudiante de 4to semestre de Ingeniería de Sistemas de la Universidad Católica Boliviana</small></p>
+            </div>
+            <button id="hamburger-btn" class="hamburger-btn" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Botón interactivo para cambiar entre Modo Oscuro y Modo Claro mediante JavaScript -->
+            <button id="theme-toggle" class="theme-btn" type="button" aria-label="Cambiar tema">
+                <span id="theme-text">Modo Oscuro</span>
+                <span id="theme-icon">🌙</span>
+            </button> 
+        </div>
+
+        <!-- Enlace accesible de salto rápido para lectores de pantalla -->
+        <a href="#Contactos" class="skip-link">Saltar al contenido principal</a>
+
+        <!-- Menú de navegación accesible entre páginas del sitio web -->
+        <nav id="primary-navigation" class="nav-menu" aria-label="Navegación principal del currículum">
+            <ul>
+                <li><a href="index.html">Perfil Profesional</a></li>
+                <li><a href="Formacion.html">Formación Académica</a></li>
+                <li><a href="Experiencia.html">Experiencia Laboral</a></li>
+                <li><a href="Habilidades.html">Habilidades Técnicas</a></li>
+                <li><a href="Cursos.html">Cursos</a></li>
+                <li><a href="Idiomas.html">Idiomas</a></li>
+                <li><a href="Proyectos.html">Proyectos Destacados</a></li>
+                <li><a href="Portafolio.html">Portafolio Multimedia</a></li>
+                <li><a href="Contactos.html" class="active" aria-current="page">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==========================================================================
+         CONTENIDO PRINCIPAL (MAIN)
+         Sección interactiva con formulario de contacto validado con atributos HTML5
+         y atributos ARIA para accesibilidad web.
+         ========================================================================== -->
+    <main id="main-content" role="main" class="animate-fade-in">
+        <section id="Contactos" aria-labelledby="Contactos-heading">
+            <h2 id="Contactos-heading">Contacto</h2>
+            <p>¿Tienes alguna consulta o propuesta? Completa el formulario y me pondré en contacto contigo:</p>
+
+            <!-- Formulario principal estilizado dentro de una tarjeta con id para JS -->
+            <form id="contact-form" action="#" method="post" enctype="multipart/form-data" class="contact-form project-card animate-fade-in" novalidate>
+                
+                <fieldset class="form-fieldset">
+                    <legend class="form-legend">✉️ <strong>Datos de Contacto</strong></legend>
+
+                    <!-- Campo: Nombre Completo -->
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                        <input type="text" id="nombre" name="nombre" required aria-required="true"
+                            placeholder="Ej. Ana María Pérez" minlength="3" maxlength="60" class="form-input">
+                        <small id="nombre-error" class="error-message" style="color: #ff6b6b; font-size: 0.85rem; display: none; margin-top: 0.25rem;"></small>
+                    </div>
+
+                    <!-- Campo: Correo Electrónico -->
+                    <div class="form-group">
+                        <label for="email">Correo Institucional / Personal <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required aria-required="true"
+                            placeholder="estudiante@ucb.edu.bo" class="form-input">
+                        <small id="email-error" class="error-message" style="color: #ff6b6b; font-size: 0.85rem; display: none; margin-top: 0.25rem;"></small>
+                    </div>
+
+                    <!-- Campo: Teléfono móvil -->
+                    <div class="form-group">
+                        <label for="telefono">Número de Teléfono / WhatsApp <span class="required">*</span></label>
+                        <input type="tel" id="telefono" name="telefono" required aria-required="true"
+                            aria-describedby="telefono-help" placeholder="+591 70000000"
+                            pattern="(\+591|591)?[67][0-9]{7}" class="form-input">
+                        <small id="telefono-help" class="form-help">Formato: celular boliviano de 8 dígitos (ej. +591 70000000)</small>
+                        <small id="telefono-error" class="error-message" style="color: #ff6b6b; font-size: 0.85rem; display: none; margin-top: 0.25rem;"></small>
+                    </div>
+
+                    <!-- Campo: Motivo del Mensaje -->
+                    <div class="form-group">
+                        <label for="motivo">Motivo de Contacto <span class="required">*</span></label>
+                        <input type="text" id="motivo" name="motivo" required aria-required="true"
+                            placeholder="Ej. Consulta sobre proyecto de software" minlength="5" maxlength="200" class="form-input">
+                        <small id="motivo-error" class="error-message" style="color: #ff6b6b; font-size: 0.85rem; display: none; margin-top: 0.25rem;"></small>
+                    </div>
+
+                    <!-- Campo: Cuerpo del Mensaje -->
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje <span class="required">*</span></label>
+                        <textarea id="mensaje" name="mensaje" required aria-required="true"
+                            placeholder="Escribe aquí tu mensaje..." minlength="10" maxlength="500" rows="4" class="form-input form-textarea"></textarea>
+                        <small id="mensaje-error" class="error-message" style="color: #ff6b6b; font-size: 0.85rem; display: none; margin-top: 0.25rem;"></small>
+                    </div>
+
+                    <!-- Casilla de Verificación -->
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="confirmacion" name="confirmacion" required aria-required="true" class="form-checkbox">
+                        <label for="confirmacion">Confirmo el envío de este formulario <span class="required">*</span></label>
+                        <small id="confirmacion-error" class="error-message" style="color: #ff6b6b; font-size: 0.85rem; display: block; margin-top: 0.25rem;"></small>
+                    </div>
+
+                </fieldset>
+
+                <!-- Botones de acción y contenedor de retroalimentación global -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-location btn-submit"><strong>🚀 Enviar Formulario</strong></button>
+                    <button type="reset" class="btn-location btn-reset">🧹 Limpiar Campos</button>
+                </div>
+
+                <!-- Banner de éxito o error al enviar -->
+                <div id="form-feedback" style="margin-top: 1rem; text-align: center; font-weight: 600; display: none;"></div>
+            </form>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+         PIE DE PÁGINA (FOOTER)
+         Derechos de autor, especificaciones técnicas de desarrollo y fecha de edición.
+         ========================================================================== -->
+    <footer role="contentinfo">
+        <p><small>&copy; Ian Camilo Coronado Guachalla. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+
+    <!-- Carga del archivo JS para el funcionamiento global del sitio -->
+    <script src="jss/main.js"></script>
+</body>
+</html>

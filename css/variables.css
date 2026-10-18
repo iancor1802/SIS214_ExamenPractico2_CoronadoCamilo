@@ -1,0 +1,75 @@
+/* ==========================================================================
+   TOKENS DE DISEÑO Y VARIABLES GLOBALES
+   ========================================================================== */
+
+:root {
+  /* Tokens de diseño solicitados */
+  --primary-color: #0056b3;
+  --secondary-color: #17a2b8;
+  --font-family-base: 'Segoe UI', system-ui, sans-serif;
+  --spacing-unit: 1rem;
+
+  /* Modo Claro - Clean & Fresh Tech */
+  --bg-color: #f0fdf4;
+  --bg-header: rgba(240, 253, 244, 0.85);
+
+  --text-color: #0f172a;
+  --text-secundary: #0d9488;
+  --text-link: #0369a1;
+
+  --border-card: rgba(13, 148, 136, 0.2);
+
+  --color-blue: #0f172a;
+  --color-black: #020617;
+  --color-beige: #0d9488;
+  --color-scrolbar: #0ea5e9;
+  --color-scrolbar2: #14b8a6;
+  --color-card: #ffffff;
+  --color-green: #065f46;
+  --color-green2: #0d9488;
+  --color-frase: #ccfbf1;
+  --color-green3: #14b8a6;
+  --color-white: #ffffff;
+  --color-barra: rgba(13, 148, 136, 0.15);
+  --color-turqueza: #2dd4bf;
+  --color-turqueza2: #06b6d4;
+  --color-border: #cbd5e1;
+  --color-barra2: rgba(13, 148, 136, 0.85);
+
+  --btn-bg: #0f172a;
+  --btn-text: #ffffff;
+
+  /* FUENTES Y ESPACIOS */
+  --font-title: 'IBM Plex Serif', serif;
+  --space-md: 1rem;
+  --space-md2: 2.5rem;
+  --space-xs: 0.5rem;
+
+  /* RADIOS Y EFECTOS */
+  --radius-sm: 10px;
+  --radius-full: 9999px;
+  --backdrop-glass: blur(12px);
+  --shadow-header: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.08);
+}
+
+/* Modo Oscuro - Deep Ocean & Neon Emerald */
+[data-theme="dark"] { 
+  --bg-color: #0b1329;
+  --bg-header: rgba(11, 19, 41, 0.85);
+
+  --text-color: #f8fafc; 
+  --text-secundary: #2dd4bf;
+  --text-link: #38bdf8;
+
+  --btn-bg: #2dd4bf;
+  --btn-text: #0b1329;
+
+  --color-beige: #2dd4bf;
+  --color-border: rgba(45, 212, 191, 0.15);
+  --color-card: #131c38;
+  --color-frase: rgba(13, 148, 136, 0.2);
+  --color-barra: rgba(45, 212, 191, 0.2);
+
+  --shadow-header: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+  --border-card: rgba(45, 212, 191, 0.3); 
+}

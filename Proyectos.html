@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos Destacados - Mi Curriculum Vitae</title>
+    <!-- Vinculación de la hoja de estilos principal -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         ENCABEZADO PRINCIPAL (HEADER)
+         ========================================================================== -->
+    <header role="banner" class="animate-header">
+        <div class="header-top">
+            <div class="header-title">
+                <h1>MI CURRICULUM VITAE</h1> 
+                <p><small>Estudiante de 4to semestre de Ingeniería de Sistemas de la Universidad Católica Boliviana</small></p>
+            </div>
+            <button id="hamburger-btn" class="hamburger-btn" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Botón interactivo para alternar el tema -->
+            <button id="theme-toggle" class="theme-btn" type="button" aria-label="Cambiar tema">
+                <span id="theme-text">Modo Oscuro</span>
+                <span id="theme-icon">🌙</span>
+            </button> 
+        </div>
+
+        <a href="#Proyectos" class="skip-link">Saltar al contenido principal</a>
+
+        <nav id="primary-navigation" class="nav-menu" aria-label="Navegación principal del currículum">
+            <ul>
+                <li><a href="index.html">Perfil Profesional</a></li>
+                <li><a href="Formacion.html">Formación Académica</a></li>
+                <li><a href="Experiencia.html">Experiencia Laboral</a></li>
+                <li><a href="Habilidades.html">Habilidades Técnicas</a></li>
+                <li><a href="Cursos.html">Cursos</a></li>
+                <li><a href="Idiomas.html">Idiomas</a></li>
+                <li><a href="Proyectos.html" class="active" aria-current="page">Proyectos Destacados</a></li>
+                <li><a href="Portafolio.html">Portafolio Multimedia</a></li>
+                <li><a href="Contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==========================================================================
+         CONTENIDO PRINCIPAL (MAIN)
+         ========================================================================== -->
+    <main id="main-content" role="main" class="animate-fade-in">
+        <section id="Proyectos" aria-labelledby="Proyectos-heading">
+            <h2 id="Proyectos-heading">Proyectos Destacados</h2>
+            <p>Una muestra interactiva de las soluciones de software desarrolladas durante mi formación académica:</p>
+
+            <!-- Contenedor en retícula responsiva de proyectos locales -->
+            <div class="projects-grid">
+                <article class="project-card animate-fade-in">
+                    <div>
+                        <h3>Piedra, Papel y Tijera</h3>
+                        <span class="tech-badge">C++ (Consola)</span>
+                        <p>Juego por consola donde el usuario compite contra la computadora con elecciones aleatorias, registrando puntos en tiempo real.</p>
+                        <p><strong>Rol:</strong> Desarrollador independiente.</p>
+                    </div>
+                    <div>
+                        <p><strong>Enlace:</strong> <a href="https://onlinegdb.com/XBp70E6il" target="_blank" rel="noopener noreferrer">🔗 Ver código &rarr;</a></p>
+                    </div>
+                </article>
+
+                <article class="project-card animate-fade-in">
+                    <div>
+                        <h3>Tienda Virtual</h3>
+                        <span class="tech-badge">Java (POO)</span>
+                        <p>Aplicación de escritorio diseñada para gestionar productos, catálogo interactivo y carrito de compras.</p>
+                        <p><strong>Rol:</strong> Desarrollador independiente.</p>
+                    </div>
+                    <div>
+                        <p><strong>Enlace:</strong> <a href="https://onlinegdb.com/8SQ3UU2El" target="_blank" rel="noopener noreferrer">🔗 Ver código &rarr;</a></p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- ==========================================================================
+                 MÓDULO ASÍNCRONO E INTEGRACIÓN REST (GIBHUB API)
+                 Refleja los tres estados requeridos: Loading, Success y Error de forma limpia.
+                 ========================================================================== -->
+            <section id="proyectos-github" class="project-card animate-fade-in" style="margin-top: 3rem; padding: 2rem;">
+                <h2>Repositorios de GitHub en Tiempo Real</h2>
+                <p>Consumo asíncrono de API REST externa utilizando Fetch API, async/await y bloques try...catch.</p>
+                
+                <div id="api-status-container" style="margin-top: 1.5rem;">
+                    
+                    <!-- 1. ESTADO: CARGANDO (Loading) -->
+                    <div id="api-loading" style="display: none; text-align: center; padding: 2rem;">
+                        <p style="color: var(--color-green2); font-weight: 600;">⏳ Cargando repositorios desde la API de GitHub...</p>
+                    </div>
+                    
+                    <!-- 2. ESTADO: ERROR (Error) -->
+                    <div id="api-error" style="display: none; padding: 1rem; background: rgba(255, 107, 107, 0.1); border: 1px solid #ff6b6b; border-radius: var(--radius-sm); color: #ff6b6b;">
+                        <p id="error-message" style="margin: 0; font-weight: 600;">❌ Ocurrió un error en la solicitud.</p>
+                    </div>
+                    
+                    <!-- 3. ESTADO: ÉXITO (Success) -->
+                    <div id="api-success" style="display: none;">
+                        <ul id="repos-list" style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+                            <!-- Los elementos se inyectarán dinámicamente mediante JS -->
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+         PIE DE PÁGINA (FOOTER)
+         ========================================================================== -->
+    <footer role="contentinfo">
+        <p><small>&copy; Ian Camilo Coronado Guachalla. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+
+    <!-- Carga del script principal -->
+    <script src="jss/main.js"></script>
+</body>
+</html>

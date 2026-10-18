@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Multimedia - Mi Curriculum Vitae</title>
+    <!-- Vinculación del punto de entrada maestro para hojas de estilo CSS3 -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         ENCABEZADO PRINCIPAL (HEADER)
+         Incluye la barra de título superior, conmutador de temas mediante JS, 
+         acceso accesible de salto rápido y la barra de navegación con la pestaña activa.
+         ========================================================================== -->
+    <header role="banner" class="animate-header">
+        <div class="header-top">
+            <div class="header-title">
+                <h1>MI CURRICULUM VITAE</h1> 
+                <p><small>Estudiante de 4to semestre de Ingeniería de Sistemas de la Universidad Católica Boliviana</small></p>
+            </div>
+            <button id="hamburger-btn" class="hamburger-btn" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Botón interactivo para alternar entre Modo Oscuro y Modo Claro mediante JavaScript -->
+            <button id="theme-toggle" class="theme-btn" type="button" aria-label="Cambiar tema">
+                <span id="theme-text">Modo Oscuro</span>
+                <span id="theme-icon">🌙</span>
+            </button> 
+        </div>
+
+        <!-- Enlace accesible de salto rápido directo al contenido principal -->
+        <a href="#Perfil" class="skip-link">Saltar al contenido principal</a>
+
+        <!-- Menú de navegación accesible global con indicador aria-current en Portafolio Multimedia -->
+        <nav id="primary-navigation" class="nav-menu" aria-label="Navegación principal del currículum">
+            <ul>
+                <li><a href="index.html">Perfil Profesional</a></li>
+                <li><a href="Formacion.html">Formación Académica</a></li>
+                <li><a href="Experiencia.html">Experiencia Laboral</a></li>
+                <li><a href="Habilidades.html">Habilidades Técnicas</a></li>
+                <li><a href="Cursos.html">Cursos</a></li>
+                <li><a href="Idiomas.html">Idiomas</a></li>
+                <li><a href="Proyectos.html">Proyectos Destacados</a></li>
+                <li><a href="Portafolio.html" class="active" aria-current="page">Portafolio Multimedia</a></li>
+                <li><a href="Contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==========================================================================
+         CONTENIDO PRINCIPAL (MAIN)
+         Sección de Portafolio Multimedia con integración de imágenes adaptativas (<picture>),
+         reproductor de audio (<audio>) y video nativo HTML5 (<video>) con subtítulos y accesibilidad.
+         ========================================================================== -->
+    <main id="main-content" role="main" class="animate-fade-in">
+    <section id="Portafolio" aria-labelledby="Portafolio-heading">
+        <h2 id="Portafolio-heading">Portafolio Multimedia</h2>
+        <div class="projects-grid">
+
+            <article class="project-card animate-fade-in">
+                <div class="card-icon">🖼️</div>
+                <h3>Imagen del Proyecto "Tienda Virtual"</h3>
+                <figure class="media-container">
+                    <picture>
+                        <source media="(min-width: 800px)" srcset="./assets/images/imagenproyecto.jpg">
+                        <source media="(min-width: 450px)" srcset="./assets/images/imagenproyecto.jpg">
+                        <img src="./assets/images/imagenproyecto.jpg"
+                            alt="Imagen del proyecto realizado en JAVA" class="responsive-img" loading="lazy">
+                    </picture>
+                    <figcaption>Figura 1: Imagen del apartado del administrador en la tienda virtual.</figcaption>
+                </figure>
+            </article>
+
+            <article class="project-card animate-fade-in">
+                <div class="card-icon">🎙️</div>
+                <h3>Audio de la Presentación del Proyecto</h3>
+                <p>Audio explicativo de cómo funciona el programa.</p>
+                <figure class="media-container">
+                    <audio controls preload="metadata" class="styled-audio"
+                        aria-label="Pista de Audio explicativo del programa en Java" role="group">
+                        <source src="./assets/audios/audioproyecto.mpeg" type="audio/mpeg">
+                        Tu navegador no soporta la reproducción de audio nativo HTML5.
+                    </audio>
+                    <figcaption>Audio 1: Explicación de la ejecución del programa.</figcaption>
+                </figure>
+            </article>
+
+            <article class="project-card animate-fade-in">
+                <div class="card-icon">🎬</div>
+                <h3>Video de la Presentación del Proyecto</h3>
+                <p>Un breve resumen explicativo del proyecto.</p>
+                <figure class="media-container">
+                    <video controls poster="./assets/images/imagenproyecto.jpg" preload="metadata" class="responsive-video"
+                        aria-label="Video resumen de la explicacion del codigo" role="group">
+                        <source src="./assets/videos/videoproyecto.mp4" type="video/mp4">
+                        Tu navegador no admite la reproducción de video nativo en HTML5.
+                    </video>
+                    <figcaption>Video 1: Video explicativo de cómo funciona el programa.</figcaption>
+                </figure>
+            </article>
+
+        </div>
+    </section>
+</main>
+
+    <!-- ==========================================================================
+         PIE DE PÁGINA (FOOTER)
+         Derechos de autor, especificaciones de arquitectura web y timestamp de actualización.
+         ========================================================================== -->
+    <footer role="contentinfo">
+        <p><small>&copy; Ian Camilo Coronado Guachalla. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+
+    <!-- Carga diferida de scripts JavaScript para interactividad global -->
+    <script src="jss/main.js"></script>
+</body>
+</html>

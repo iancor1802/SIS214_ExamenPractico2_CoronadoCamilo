@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idiomas - Mi Curriculum Vitae</title>
+    <!-- Vinculación del punto de entrada maestro para hojas de estilo CSS3 -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         ENCABEZADO PRINCIPAL (HEADER)
+         Incluye la barra de título superior, conmutador de tema visual (oscuro/claro),
+         enlace de salto rápido accesible y la barra de navegación con la página activa.
+         ========================================================================== -->
+    <header role="banner" class="animate-header">
+        <div class="header-top">
+            <div class="header-title">
+                <h1>MI CURRICULUM VITAE</h1> 
+                <p><small>Estudiante de 4to semestre de Ingeniería de Sistemas de la Universidad Católica Boliviana</small></p>
+            </div>
+            <button id="hamburger-btn" class="hamburger-btn" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Botón interactivo para alternar el tema mediante JavaScript -->
+            <button id="theme-toggle" class="theme-btn" type="button" aria-label="Cambiar tema">
+                <span id="theme-text">Modo Oscuro</span>
+                <span id="theme-icon">🌙</span>
+            </button> 
+        </div>
+
+        <!-- Acceso directo accesible para navegación por teclado y lectores de pantalla -->
+        <a href="#Perfil" class="skip-link">Saltar al contenido principal</a>
+
+        <!-- Menú de navegación accesible entre páginas del sitio web con estado activo -->
+        <nav id="primary-navigation" class="nav-menu" aria-label="Navegación principal del currículum">
+            <ul>
+                <li><a href="index.html">Perfil Profesional</a></li>
+                <li><a href="Formacion.html">Formación Académica</a></li>
+                <li><a href="Experiencia.html">Experiencia Laboral</a></li>
+                <li><a href="Habilidades.html">Habilidades Técnicas</a></li>
+                <li><a href="Cursos.html">Cursos</a></li>
+                <li><a href="Idiomas.html" class="active" aria-current="page">Idiomas</a></li>
+                <li><a href="Proyectos.html">Proyectos Destacados</a></li>
+                <li><a href="Portafolio.html">Portafolio Multimedia</a></li>
+                <li><a href="Contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==========================================================================
+         CONTENIDO PRINCIPAL (MAIN)
+         Sección de Idiomas representada mediantes datos estructurados en una tabla HTML5 
+         accesible con atributos ARIA y barras de progreso nativas (<progress>).
+         ========================================================================== -->
+    <main id="main-content" role="main" class="animate-fade-in">
+        <section id="Idiomas" aria-labelledby="Idiomas-heading">
+            <h2 id="Idiomas-heading">Idiomas</h2>
+            <p>Competencias lingüísticas y niveles de dominio:</p>
+            
+            <article class="table-container">
+                <table class="styled-table">
+                    <caption>TABLA DE LOS IDIOMAS QUE HABLO</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Idioma</th>
+                            <th scope="col">Lectura</th>
+                            <th scope="col">Escritura</th>
+                            <th scope="col">Conversación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Inglés</strong></td>
+                            <td>Avanzado</td>
+                            <td>Avanzado</td>
+                            <td>
+                                <div class="progress-wrapper">
+                                    <span>85%</span>
+                                    <progress value="85" max="100" role="progressbar"
+                                        aria-label="Porcentaje de Conversación Inglés" aria-valuenow="85" aria-valuemin="0"
+                                        aria-valuemax="100" aria-valuetext="85% de conversación en el idioma Inglés (85%)">85%</progress>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Español</strong></td>
+                            <td>Avanzado</td>
+                            <td>Avanzado</td>
+                            <td>
+                                <div class="progress-wrapper">
+                                    <span>98%</span>
+                                    <progress value="98" max="100" role="progressbar"
+                                        aria-label="Porcentaje de Conversación Español" aria-valuenow="98" aria-valuemin="0"
+                                        aria-valuemax="100" aria-valuetext="98% de conversación en el idioma Español (98%)">98%</progress>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Total de idiomas aprendidos:</strong></td>
+                            <td><strong>2 idiomas en total</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+         PIE DE PÁGINA (FOOTER)
+         Derechos de autor, especificaciones técnicas de desarrollo y fecha de edición.
+         ========================================================================== -->
+    <footer role="contentinfo">
+        <p><small>&copy; Ian Camilo Coronado Guachalla. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+
+    <!-- Carga del script principal para la funcionalidad dinámica del sitio -->
+    <script src="jss/main.js"></script>
+</body>
+</html>
